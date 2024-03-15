@@ -1,0 +1,9 @@
+[win]
+win_2019	ansible_host=10.1.32.35
+
+[win:vars]
+ansible_user=vagrant
+ansible_password=vagrant
+ansible_port=5986
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore

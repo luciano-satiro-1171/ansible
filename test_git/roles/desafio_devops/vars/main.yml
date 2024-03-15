@@ -1,0 +1,11 @@
+---
+# vars file for desafio_devops
+pacotes:
+  - vim
+  - curl
+  - telnet
+  - unzip
+  - wget
+  - net-tools
+  - htop
+  - nmap
