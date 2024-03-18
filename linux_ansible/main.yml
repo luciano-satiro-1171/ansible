@@ -3,3 +3,4 @@
   become: true
   roles:
     - desafio_devops
+#    - check_list

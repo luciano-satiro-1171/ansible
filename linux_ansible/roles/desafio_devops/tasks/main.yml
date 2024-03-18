@@ -12,7 +12,7 @@
 
 - name: cria um usuario com meu nome
   user:
-    name: luciano6
+    name: luciano
     shell: /bin/bash
     password: "{{ senha }}"
 

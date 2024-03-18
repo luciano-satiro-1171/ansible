@@ -1,0 +1,11 @@
+# atualiza os repositorios e sistemas pelo ansible:
+
+# update
+
+# upgrade
+
+# adiciona repositorios
+
+# ferramentas basicas
+
+# clean
