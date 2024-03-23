@@ -1,0 +1,17 @@
+[debian]
+ubuntu_22	ansible_host=10.1.32.51
+
+[redhat]
+centos_7	ansible_host=10.1.32.52
+
+[all_vms:children]
+debian
+redhat
+
+[all_vms:vars]
+ansible_user=vagrant
+ansible_password=vagrant
+ansible_port=22
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+
+# obs.: ao criar uma chave ssh privada e publica nao precisa especificar a senha esta e uma medida de segurança

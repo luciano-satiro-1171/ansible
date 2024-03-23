@@ -1,8 +1,0 @@
-[desafio]
-desafio_devops ansible_host=10.1.32.55
-check_list ansible_host=10.1.32.52
-
-[desafio:vars]
-ansible_user=vagrant
-ansible_password=vagrant
-ansible_port=22

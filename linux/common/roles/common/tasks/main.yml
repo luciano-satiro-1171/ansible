@@ -1,0 +1,24 @@
+---
+# tasks file for common
+- name: atualiza e instala pacotes essencias em distribuicoes debian
+  ansible.builtin.script: ./common_debian.sh
+  when: ansible_distribution_file_variety == "Debian"
+
+- name: verifica se houve erro em distribuicoes debian
+  ansible.builtin.shell: grep -wq "^\[error\]" /home/vagrant/common.log
+  register: debian
+  failed_when: debian.rc == 0
+  when: ansible_distribution_file_variety == "Debian"
+
+############################################################################
+
+- name: atualiza e instala pacotes essencias em distribuicoes redhat
+  ansible.builtin.script: ./common_redhat.sh
+  when: ansible_distribution_file_variety == "RedHat"
+
+- name: verifica se houve erro em distribuicoes redhat
+  ansible.builtin.shell: grep -wq "^\[error\]" /home/vagrant/common.log
+  register: redhat
+  failed_when: redhat.rc == 0
+  when: ansible_distribution_file_variety == "RedHat"
+

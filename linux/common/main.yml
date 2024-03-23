@@ -1,0 +1,10 @@
+---
+# executa em todos os hosts do arquivo hosts.txt:
+- hosts: all
+
+  # solicita privilegios de root:
+  become: true
+
+  # executa o que esta dentro do diretorio roles:
+  roles:
+    - common
