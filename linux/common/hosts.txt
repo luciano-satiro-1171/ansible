@@ -13,6 +13,7 @@ ansible_user=vagrant
 ansible_password=vagrant
 ansible_port=22
 ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+ansible_python_interpreter=/usr/bin/python3
 
 # obs.: ao criar uma chave ssh privada e publica nao precisa
 # especificar a senha em ansible_password esta e uma medida de segurança
