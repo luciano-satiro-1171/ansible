@@ -1,5 +1,6 @@
 [debian]
 ubuntu_22	ansible_host=10.1.32.51
+ubuntu_16	ansible_host=10.1.32.53 ansible_python_interpreter=/usr/bin/python2.7
 
 [redhat]
 centos_7	ansible_host=10.1.32.52
@@ -13,7 +14,6 @@ ansible_user=vagrant
 ansible_password=vagrant
 ansible_port=22
 ansible_ssh_common_args='-o StrictHostKeyChecking=no'
-ansible_python_interpreter=/usr/bin/python3
 
 # obs.: ao criar uma chave ssh privada e publica nao precisa
 # especificar a senha em ansible_password esta e uma medida de segurança
