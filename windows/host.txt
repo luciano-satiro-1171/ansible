@@ -1,9 +1,19 @@
-[win]
+[win_srv]
 win_2019	ansible_host=10.1.32.35
 
-[win:vars]
+[win_client]
+win_10		ansible_host=10.1.32.36
+
+[sistemas:children]
+win_srv
+win_client
+
+[sistemas:vars]
 ansible_user=vagrant
 ansible_password=vagrant
 ansible_port=5986
 ansible_connection=winrm
 ansible_winrm_server_cert_validation=ignore
+
+# obs.: ao criar uma chave ssh privada e publica nao precisa
+# especificar a senha em ansible_password esta e uma medida de segurança

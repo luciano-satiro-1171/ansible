@@ -1,4 +1,12 @@
 ---
+# author:      luciano dos santos
+# contact:     luciano.satiro1171@gmail.com
+# description: instala pacotes essencias em sistemas windows
+
+# executa em todos os hosts do arquivo hosts.txt:
 - hosts: all
+
+  # executa o que esta dentro do diretorio roles:
   roles:
     - win_defaults
+...

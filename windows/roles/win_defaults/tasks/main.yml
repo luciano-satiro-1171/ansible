@@ -12,71 +12,51 @@
 #- name: Install adobereader
 #  win_chocolatey:
 #    name: adobereader
-#    version: '2023.8.20555'
-#    source: http://internal/odata/repo
 #    state: present
 
 #- name: Install flashplayerplugin
 #  win_chocolatey:
 #    name: flashplayerplugin
-#    version: '32.0.0.465'
-#    source: http://internal/odata/repo
 #    state: present
 
 #- name: Install silverlight
 #  win_chocolatey:
 #    name: silverlight
-#    version: '5.1.50918.0'
-#    source: http://internal/odata/repo
 #    state: present
 
 #- name: Install dotnetfx 4.8.0
 #  win_chocolatey:
 #    name: dotnetfx
-#    version: '4.8.0.20220524'
-#    source: http://internal/odata/repo
 #    state: present
 
 #- name: Install dotnet4.5.2
 #  win_chocolatey:
 #    name: dotnet4.5.2
-#    version: '4.5.2.20140902'
-#    source: http://internal/odata/repo
 #    state: present
 
 #- name: Install dotnet4.6.1
 #  win_chocolatey:
 #    name: dotnet4.6.1
-#    version: '4.6.01055.20170308'
-#    source: http://internal/odata/repo
 #    state: present
 
 #- name: Install dotnet3.5
 #  win_chocolatey:
 #    name: dotnet3.5
-#    version: '3.5.20160716'
-#    source: http://internal/odata/repo
 #    state: presen
 
 #- name: Install winrar
 #  win_chocolatey:
 #    name: winrar
-#    version: '7.0.0'
-#    source: http://internal/odata/repo
 #    state: present
 
 #- name: Install k-litecodecpackfull
 #  win_chocolatey:
 #    name: k-litecodecpackfull
-#    version: '18.1.5'
-#    source: http://internal/odata/repo
 #    state: present
 
 #- name: Install jre8
 #  win_chocolatey:
 #    name: jre8
-#    version: '8.0.401'
-#    source: http://internal/odata/repo
 #    state: present
 
 #- name: Install git
@@ -87,34 +67,25 @@
 #- name: Install putty.install
 #  win_chocolatey:
 #    name: putty.install
-#    version: '0.80.0'
-#    source: http://internal/odata/repo
 #    state: present
 
 #- name: Install filezilla
 #  win_chocolatey:
 #    name: filezilla
-#    version: '3.66.5'
-#    source: http://internal/odata/repo
 #    state: present
 
 #- name: Install libreoffice-fresh
 #  win_chocolatey:
 #    name: libreoffice-fresh
-#    version: '7.6.5'
-#    source: http://internal/odata/repo
 #    state: present
 
 #- name: Install microsoft-office-deployment
 #  win_chocolatey:
 #    name: microsoft-office-deployment
-#    version: '16.0.17126.20132'
-#    source: http://internal/odata/repo
 #    state: present
 
 #- name: Install winscp.install
 #  win_chocolatey:
 #    name: winscp.install
-#    version: '6.3.2'
-#    source: http://internal/odata/repo
 #    state: present
+...
