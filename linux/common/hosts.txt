@@ -17,3 +17,4 @@ ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 
 # obs.: ao criar uma chave ssh privada e publica nao precisa
 # especificar a senha em ansible_password esta e uma medida de segurança
+# voce deve instalar python2.7 no ubuntu 16 para que o ansible funcione
