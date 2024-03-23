@@ -17,3 +17,4 @@ ansible_winrm_server_cert_validation=ignore
 
 # obs.: ao criar uma chave ssh privada e publica nao precisa
 # especificar a senha em ansible_password esta e uma medida de segurança
+# voce deve executar o que esta no diretorio powershell no windows para o ansible funcionar

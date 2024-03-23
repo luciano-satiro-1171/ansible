@@ -8,5 +8,5 @@
 
   # executa o que esta dentro do diretorio roles:
   roles:
-    - win_defaults
+    - common
 ...

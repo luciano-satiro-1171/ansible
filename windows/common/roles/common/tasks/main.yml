@@ -1,0 +1,92 @@
+---
+# tasks file for common
+- name: install google chrome
+  win_chocolatey:
+    name: googlechrome
+    state: present
+
+- name: install firefox
+  win_chocolatey:
+    name: firefox
+    state: present
+
+- name: install adobereader
+  win_chocolatey:
+    name: adobereader
+    state: present
+
+- name: install flashplayerplugin
+  win_chocolatey:
+    name: flashplayerplugin
+    state: present
+
+- name: install winrar
+  win_chocolatey:
+    name: winrar
+    state: present
+
+- name: install k-litecodecpackfull
+  win_chocolatey:
+    name: k-litecodecpackfull
+    state: present
+
+- name: install libreoffice-fresh
+  win_chocolatey:
+    name: libreoffice-fresh
+    state: present
+
+#- name: install silverlight
+#  win_chocolatey:
+#    name: silverlight
+#    state: present
+
+#- name: install dotnetfx 4.8.0
+#  win_chocolatey:
+#    name: dotnetfx
+#    state: present
+
+#- name: install dotnet4.5.2
+#  win_chocolatey:
+#    name: dotnet4.5.2
+#    state: present
+
+#- name: install dotnet4.6.1
+#  win_chocolatey:
+#    name: dotnet4.6.1
+#    state: present
+
+#- name: install dotnet3.5
+#  win_chocolatey:
+#    name: dotnet3.5
+#    state: presen
+
+#- name: install jre8
+#  win_chocolatey:
+#    name: jre8
+#    state: present
+
+#- name: install git
+#  win_chocolatey:
+#    name: git
+#    state: present
+
+#- name: install putty.install
+#  win_chocolatey:
+#    name: putty.install
+#    state: present
+
+#- name: install filezilla
+#  win_chocolatey:
+#    name: filezilla
+#    state: present
+
+#- name: install microsoft-office-deployment
+#  win_chocolatey:
+#    name: microsoft-office-deployment
+#    state: present
+
+#- name: install winscp.install
+#  win_chocolatey:
+#    name: winscp.install
+#    state: present
+...

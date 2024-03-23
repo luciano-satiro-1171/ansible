@@ -1,7 +1,0 @@
-# bizu para mv win no ansible:
-sudo apt install python3-pip
-
-# instala ferramenta:
-pip install "pywinrm>=0.2.2"
-
-

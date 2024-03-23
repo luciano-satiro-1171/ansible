@@ -21,4 +21,4 @@
   register: redhat
   failed_when: redhat.rc == 0
   when: ansible_distribution_file_variety == "RedHat"
-
+...
