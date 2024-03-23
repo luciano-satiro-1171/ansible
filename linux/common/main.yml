@@ -1,20 +1,15 @@
-[debian]
-ubuntu_22	ansible_host=10.1.32.51
-ubuntu_16	ansible_host=10.1.32.53 ansible_python_interpreter=/usr/bin/python2.7
+---
+# author:      luciano dos santos
+# contact:     luciano.satiro1171@gmail.com
+# description: atualiza e instala pacotes essencias em distribuicoes debian e redhat
 
-[redhat]
-centos_7	ansible_host=10.1.32.52
+# executa em todos os hosts do arquivo hosts.txt:
+- hosts: all
 
-[distros:children]
-debian
-redhat
+# solicita privilegios de root:
+  become: true
 
-[distros:vars]
-ansible_user=vagrant
-ansible_password=vagrant
-ansible_port=22
-ansible_ssh_common_args='-o StrictHostKeyChecking=no'
-
-# obs.: ao criar uma chave ssh privada e publica nao precisa
-# especificar a senha em ansible_password esta e uma medida de segurança
-# voce deve instalar o python2.7 no ubuntu 16 para o ansible funcionar
+  # executa o que esta dentro do diretorio roles:
+  roles:
+    - common
+...
