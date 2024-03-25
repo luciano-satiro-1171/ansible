@@ -1,6 +1,12 @@
 ---
 # author:      luciano dos santos
 # contact:     luciano.satiro1171@gmail.com
+# created:     24/03/2024
+# revision:    25/03/2024
+# rule 1:      sem acento
+# rule 2:      variavel em maiusculo
+# rule 3:      funcao em maiusculo
+# rule 4:      restante em minusculo
 # description: atualiza e instala pacotes essencias em distribuicoes debian e redhat
 
 # executa em todos os hosts do arquivo hosts.txt:

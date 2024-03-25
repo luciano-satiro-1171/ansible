@@ -6,8 +6,8 @@
 
 - name: verifica se houve erro em distribuicoes debian
   ansible.builtin.shell: grep -wq "^\[error\]" /home/vagrant/common.log
-  register: debian
-  failed_when: debian.rc == 0
+  register: DEBIAN
+  failed_when: DEBIAN.rc == 0
   when: ansible_distribution_file_variety == "Debian"
 
 ############################################################################
@@ -18,7 +18,7 @@
 
 - name: verifica se houve erro em distribuicoes redhat
   ansible.builtin.shell: grep -wq "^\[error\]" /home/vagrant/common.log
-  register: redhat
-  failed_when: redhat.rc == 0
+  register: REDHAT
+  failed_when: REDHAT.rc == 0
   when: ansible_distribution_file_variety == "RedHat"
 ...

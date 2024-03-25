@@ -1,0 +1,73 @@
+---
+# author:      luciano dos santos
+# contact:     luciano.satiro1171@gmail.com
+# created:     24/03/2024
+# revision:    25/03/2024
+# rule 1:      sem acento
+# rule 2:      variavel em maiusculo
+# rule 3:      funcao em maiusculo
+# rule 4:      restante em minusculo
+# description: atualiza distribuicoes debian e redhat
+
+- hosts: all
+  become: true
+
+# atualiza distribuicoes debian:
+  tasks:
+    - name: executa update e upgrade em distribuicoes debian
+      apt:
+        update_cache: true
+        upgrade: true
+      when:
+        - ansible_distribution_file_variety == "Debian"
+        - ansible_distribution_version != "16.04"
+
+    - name: executa update e upgrade no ubuntu 16.04
+      ansible.builtin.raw: apt-get -y -qq update && apt-get -y -qq upgrade
+      when:
+        - ansible_distribution == "Ubuntu"
+        - ansible_distribution_version == "16.04"
+
+# remove pacotes inutes do cache em distribuicoes debian:
+    - name: executa automerove, clean e autoclean em distribuicoes debian
+      apt:
+        autoremove: true
+        clean: true
+        autoclean: true
+      when:
+        - ansible_distribution_file_variety == "Debian"
+        - ansible_distribution_version != "16.04"
+
+    - name: executa autoremove, clean e autoclean no ubuntu 16.04
+      ansible.builtin.raw: apt-get -y autoremove && apt-get -y clean && apt-get -y autoclean
+      when:
+        - ansible_distribution == "Ubuntu"
+        - ansible_distribution_version == "16.04"
+
+################################################################################
+
+# atualiza distribuicoes redhat:
+
+    - name: executa update e upgrade em distribuicoes redhat
+      yum:
+        update_cache: true
+        name: '*'
+        state: latest
+      when:
+        - ansible_distribution_file_variety == "RedHat"
+        - ansible_pkg_mgr == "yum"
+
+# remove pacotes inutes do cache em distribuicoes redhat:
+    - name: executa automerove em distribuicoes redhat
+      yum:
+        autoremove: true
+      when:
+        - ansible_distribution_file_variety == "RedHat"
+        - ansible_pkg_mgr == "yum"
+
+    - name: executa clean all em distribuicoes redhat
+      ansible.builtin.command: yum -y clean all
+      when:
+        - ansible_distribution_file_variety == "RedHat"
+        - ansible_pkg_mgr == "yum"
+...
